@@ -1,13 +1,7 @@
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
 
+// 2. Simulate and implement Stop And Wait ARQ protocol for noisy channel.
 
-/*
- 
-This program simulates the stop-and-wait protocol for a noisy channel by sending messages, receiving ACKs or corrupted messages, and
-handling timeouts. In a real implementation, you would send the messages and receive ACKs through a network connection, and use a timer 
-to handle timeouts. However, this program uses simulated methods to send messages, start timers, and receive messages to make it easier 
-to test and understand the stop-and-wait protocol.
-
-*/
 import java.util.Random;
 
 class StopAndWaitARQ {
@@ -131,3 +125,12 @@ Thread timer = new Thread(() -> {
   
 
   
+
+/*
+
+This program simulates the stop-and-wait protocol for a noisy channel by sending messages, receiving ACKs or corrupted messages, and
+handling timeouts. In a real implementation, you would send the messages and receive ACKs through a network connection, and use a timer 
+to handle timeouts. However, this program uses simulated methods to send messages, start timers, and receive messages to make it easier 
+to test and understand the stop-and-wait protocol.
+
+*/

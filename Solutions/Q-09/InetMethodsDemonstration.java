@@ -1,10 +1,17 @@
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
+
+// 9. Write a program to implement following methods:
+//  -  public String getHostName()
+//  -  public byte[] getAddress()
+//  -  public String getHostAddress()
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 class InetMethodsDemonstration {
-    public static void main(String[] args) throws UnknownHostException{
+    public static void main(String[] args) throws UnknownHostException {
         Scanner sc = new Scanner(System.in);
 
         InetAddress local = InetAddress.getLocalHost();
@@ -17,9 +24,5 @@ class InetMethodsDemonstration {
         byte []addressBytes = host.getAddress();
        
         System.out.println(Arrays.toString(addressBytes));
-
-
-
-        
     }    
 }

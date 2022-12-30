@@ -1,4 +1,6 @@
-// Dijkstra's Algorithm in Java
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
+
+// 5. Simulate and implement Dijkstra Algorithm for Shortest Path Routing.
 
 public class DijkstraAlgorithm {
 

@@ -1,6 +1,6 @@
 ## ✅ Network Programming
 
-![Network-Programming](https://socialify.git.ci/anuj-das-10/Network-Programming/image?description=1&descriptionEditable=CSC-DSE-502-L%20-%3E%20Network%20Programming%20LAB%20(Solutions)&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Signal&stargazers=1&theme=Dark)
+![Network-Programming](https://socialify.git.ci/anuj-das-10/Network-Programming/image?description=1&descriptionEditable=CSC-DSE-502-L%20-%3E%20Network%20Programming%20LAB%20(Solutions)&forks=1&language=1&name=1&owner=1&pattern=Signal&stargazers=1&theme=Dark)
 
 
 ### 🤔Not familiar with GitHub Interface?
@@ -31,49 +31,49 @@
 
 #### Q1) &ensp;  Simulate Cyclic Redundancy Check (CRC) error detection algorithm for noisy channel.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-01/CRC_ErrorDetectionAlgorithm.java)✅
 #
 
 
 #### Q2) &ensp;  Simulate and implement stop and wait protocol for noisy channel.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-02/StopAndWaitARQ.java)✅
 #
 
 
 #### Q3) &ensp; 	Simulate and implement Go-Back-N Sliding Window Protocol.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-03/GoBackN.java)✅
 #
 
 
 #### Q4) &ensp; Simulate and implement Distance Vector Routing Algorithm.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-04/DistanceVectorRouting.java)✅
 #
 
 
 #### Q5) &ensp; Simulate and implement Dijkstra Algorithm for shortest path routing.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-05/DijkstraAlgorithm.java)✅
 #
 
 
 #### Q6) &ensp; Program to find the address of the local machine.
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-06/GetLocalHostAddress.java)✅
 #
 
 
 #### Q7) &ensp; Program that prints the address of www.youtube.com
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-07/GetIPAddress.java)✅
 #
 
 
 #### Q8) &ensp; Program that prints all the addresses of www.youtube.com
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-08/GetAllAddresses.java)✅
 #
 
 
@@ -84,7 +84,7 @@ public String getHostAddress()
 public byte[] getAddress()
 ```
 
-- ######  [See Solution using Java]()✅
+- ######  [See Solution using Java](https://github.com/anuj-das-10/Network-Programming/blob/main/Solutions/Q-09/InetMethodsDemonstration.java)✅
 
 #
 

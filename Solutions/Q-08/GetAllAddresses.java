@@ -1,3 +1,5 @@
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
+
 // 8. WAP A program that prints all the addresses of www.youtube.com
 
 import java.net.InetAddress;
@@ -12,7 +14,7 @@ public class GetAllAddresses {
 
         try {
             InetAddress[] myHost = InetAddress.getAllByName(web_url);
-            System.out.println("\nAll Addresses of "+web_url+" :");
+            System.out.println("\nAll Addresses of "+ web_url +" :");
             for(InetAddress host:myHost) {
             System.out.println(host.getHostAddress());
             }

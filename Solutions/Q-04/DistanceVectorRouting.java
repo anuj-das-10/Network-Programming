@@ -1,4 +1,6 @@
-// 4. Simulate and implement distance vector routing algorithm. 
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
+
+// 4. Simulate and implement Distance Vector Routing Algorithm. 
 
 import java.io.*;
 

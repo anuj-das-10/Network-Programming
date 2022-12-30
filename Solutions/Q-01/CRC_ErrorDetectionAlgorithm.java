@@ -1,3 +1,5 @@
+// Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
+
 // 1. Simulate Cyclic Redundancy Check (CRC) Error Detection Algorithm for Noisy Channel.
 
 import java.util.Scanner;
