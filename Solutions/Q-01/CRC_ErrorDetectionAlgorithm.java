@@ -49,11 +49,19 @@ class CRC_ErrorDetectionAlgorithm {
 		return message;
 	}
 	
+// Passing Through Noisy Channel
+	public static String noisyChannel(String msgToBeTransmitted) {
+		StringBuilder noise = new StringBuilder(msgToBeTransmitted);
+		noise.setCharAt(msgToBeTransmitted.length()/2 , '1');
+		String noisyData = noise.toString();
+		return noisyData;
+	}
+
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the Data(Message) to be Encrypted:  ");		// Original Message
-		String message = sc.next();		    // Test --> 1010000							
+		String message = sc.next();		    // Test --> 1010000	, 100100111				
 
 		System.out.print("Enter the CRC Generator(Polynomial):  ");			// CRC Generator 
 		String polynomial = sc.next();		// Test -->  1001	
@@ -64,19 +72,19 @@ class CRC_ErrorDetectionAlgorithm {
 		String msgToBeTransmitted = generateCRC_CheckBits(modified_message, polynomial);
 		System.out.println("\nData(Message) is ready to be Transmitted:  " + msgToBeTransmitted);
 
-		System.out.print("Enter the Data(Message) to be Transmitted:  ");
-		String send_data = sc.next();
+		String send_data = noisyChannel(msgToBeTransmitted);
+		System.out.println("Data(Message) Transmitted through Noisy Channel:  "+send_data);
 
 		String checkAllZeroes = xorOperation(send_data,polynomial);
 
 // It checks if the remainder contains only zeroes  --> If it contains only zeros then the data/message is accepted else considered as error in Transmission 
 		for(int i = 0; i < checkAllZeroes.length(); i++) {
 			if(checkAllZeroes.charAt(i) == '1') {
-				System.out.println("Error in Transmission!");
+				System.out.println("\nError in Transmission!\n");
 				return;
 			}
 		}
 
-		System.out.println("No! Error in Transmission!");
+		System.out.println("\nData(Message) Transmitted Successfully!\n");
 	}
 }
