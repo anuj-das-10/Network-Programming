@@ -9,8 +9,12 @@ import java.util.*;
 class GetIPAddress {
     public static void main(String[] args) throws UnknownHostException{
        Scanner sc = new Scanner(System.in);
-       System.out.print("Enter a valid URL of Website:  ");
+       System.out.print("Enter a valid URL(including https://) of Website:  ");
        String web_url = sc.next();          // https://www.youtube.com/
+
+    //    if(web_url.charAt(0) == 'H' || web_url.charAt(0) == 'h') {   }
+    //    else { web_url = "https://" + web_url;   }
+
         try {
             InetAddress address = InetAddress.getByName(new URL(web_url).getHost());
             String ip = address.getHostAddress();
