@@ -1,6 +1,6 @@
 // Contributed by - Anuj Das ( GC University, Silchar - @ Department of Computer Science )
 
-// 1. Simulate Cyclic Redundancy Check (CRC) Error Detection Algorithm for Noisy Channel.
+// 1. Simulate and implement Cyclic Redundancy Check (CRC) Error Detection Algorithm for Noisy Channel.
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ class CRC_ErrorDetectionAlgorithm {
 		int size_in_bits = 16;
 		int shift = modified_message.length() - polynomial.length();
         while(shift >= 0) {
-            modified_message = Integer.toBinaryString(Integer.parseInt(modified_message,2)^(Integer.parseInt(polynomial,2)<<shift));
+            modified_message = Integer.toBinaryString(Integer.parseInt(modified_message,2)^Integer.parseInt(polynomial,2)<<shift);
             shift = modified_message.length() - polynomial.length();
         }
 
@@ -25,8 +25,8 @@ class CRC_ErrorDetectionAlgorithm {
 
 // It generates the encoded data/message to be transmitted (i.e., by adding CRC Check Bits to the Original  Message)
 	public static String generateCRC_CheckBits(String modified_message, String polynomial) {			
-		String remainder = xorOperation(modified_message,polynomial);
-		remainder = remainder.substring(remainder.length() - modified_message.length());
+		String remainder = xorOperation(modified_message,polynomial);								// 16bits remainder
+		remainder = remainder.substring(remainder.length() - modified_message.length());			// substring(int startIndex)
 		
         int CRC_CheckBits[] = new int[modified_message.length()];
 		for(int i = 0; i < modified_message.length(); i++) {
@@ -66,15 +66,19 @@ class CRC_ErrorDetectionAlgorithm {
 		System.out.print("Enter the CRC Generator(Polynomial):  ");			// CRC Generator 
 		String polynomial = sc.next();		// Test -->  1001	
 
+//  Sender's end
 		String modified_message = modifyMessage(message,polynomial);
 		System.out.println("Modified Data(Message):  " + modified_message);
 		
 		String msgToBeTransmitted = generateCRC_CheckBits(modified_message, polynomial);
 		System.out.println("\nData(Message) is ready to be Transmitted:  " + msgToBeTransmitted);
 
+//  Noisy Transmission Channel
 		String send_data = noisyChannel(msgToBeTransmitted);
 		System.out.println("Data(Message) Transmitted through Noisy Channel:  "+send_data);
 
+
+// Receiver's end
 		String checkAllZeroes = xorOperation(send_data,polynomial);
 
 // It checks if the remainder contains only zeroes  --> If it contains only zeros then the data/message is accepted else considered as error in Transmission 

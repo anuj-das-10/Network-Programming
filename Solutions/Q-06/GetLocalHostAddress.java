@@ -7,6 +7,6 @@ import java.net.*;
 class GetLocalHostAddress {
     public static void main(String[] args) throws UnknownHostException {
         InetAddress localhost = InetAddress.getLocalHost();
-        System.out.println(localhost.getHostAddress());
+        System.out.println("LocalHost Address: "+localhost.getHostAddress());
     }
 }
